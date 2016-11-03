@@ -22,7 +22,7 @@ class ConnectionPool {
 		}
 	}
 	
-	public Connection getConnection() {
+	public synchronized Connection getConnection() {
 		if (pool.size() != 0) {
 			Connection connection = pool.get(1);
 			pool.remove(1);
@@ -35,7 +35,7 @@ class ConnectionPool {
 		}
 	}
 	
-	public void returnConnection(Connection connection) {
+	public synchronized void returnConnection(Connection connection) {
 		pool.add(connection);
 	}
 	
