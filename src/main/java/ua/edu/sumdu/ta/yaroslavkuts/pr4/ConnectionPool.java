@@ -3,21 +3,22 @@ package ua.edu.sumdu.ta.yaroslavkuts.pr4;
 import org.apache.log4j.Logger;
 import java.util.List;
 import java.util.ArrayList;
-import java.sql.DriverManager;
 import java.sql.Connection;
-import java.sql.SQLException;
 
 class ConnectionPool {
 	
 	private static final int SIZE = 5;
-	private final static Logger LOG = Logger.getLogger(DBConnector.class);
+	private final static Logger LOG = Logger.getLogger(ConnectionPool.class);
 	private List<Connection> pool;
+	private ConnectionFactory cf;
 	
 	public ConnectionPool() {
 		pool = new ArrayList<Connection>();
 		
+		cf = new ConnectionFactory("jdbc:mysql://localhost:3306/TaskManager","root", "root");
+		
 		for (int i = 0; i < SIZE; i++) {
-			pool.add(createConnection());
+			pool.add(cf.create());
 			LOG.info("Connection added in pool");
 		}
 	}
@@ -29,7 +30,7 @@ class ConnectionPool {
 			return connection;
 		} else {
 			LOG.info("Pool is empty");
-			pool.add(createConnection());
+			pool.add(cf.create());
 			LOG.info("New connection added in pool");
 			return getConnection();
 		}
@@ -37,17 +38,5 @@ class ConnectionPool {
 	
 	public synchronized void returnConnection(Connection connection) {
 		pool.add(connection);
-	}
-	
-	private Connection createConnection() {
-		Connection connection = null;
-		try {
-			LOG.info("Try to create new connection");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/TaskManager","root", "root");
-			LOG.info("Connection created");
-		} catch (SQLException e) {
-			LOG.error(e.getMessage());
-		}
-		return connection;
 	}
 }

@@ -1,30 +1,16 @@
 package ua.edu.sumdu.ta.yaroslavkuts.pr4;
 
 import org.apache.log4j.Logger;
-import java.sql.DriverManager;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.sql.ResultSet;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 public class DBConnector {
 	
 	private final static Logger log = Logger.getLogger(DBConnector.class);
 	private static ConnectionPool connections = new ConnectionPool();
-
-	/*public static Connection getConnection() {	
-		Connection connection = null;
-		try {
-			log.info("Try to get connection");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/TaskManager","root", "root");
-			log.info("Connection received");
-			return connection;
-		} catch (SQLException e) {
-			log.error(e.getMessage());
-		}
-		return connection;
-	}*/
 	
 	public static Integer insertTask(Task task) {
 		StringBuilder query = new StringBuilder("insert into tasks (title, time, start, end, rep, isActive, prev, list_id)" 
@@ -73,16 +59,6 @@ public class DBConnector {
 			log.error(e.getMessage());
 		} finally {
 			connections.returnConnection(connection);
-			/*try {
-				if (statement!= null) {
-					statement.close();
-				}
-				if (connection != null) {
-					connection.close();
-				}
-			}  catch (SQLException e) {
-				log.error(e.getMessage());
-			}*/
 		}
 		return task_id;
 	}
@@ -111,18 +87,6 @@ public class DBConnector {
 			log.error(e.getMessage());
 		} finally {
 			connections.returnConnection(connection);
-			/*try {
-				if (preStmt!= null) {
-					preStmt.close();
-					log.info("Statement closed");
-				}
-				if (connection != null) {
-					connection.close();
-					log.info("Connection closed");
-				}
-			}  catch (SQLException e) {
-				log.error(e.getMessage());
-			}*/
 		}
 		return list_id;
 	}

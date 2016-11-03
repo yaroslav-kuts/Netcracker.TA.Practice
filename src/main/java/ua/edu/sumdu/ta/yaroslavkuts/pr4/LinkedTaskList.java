@@ -1,5 +1,11 @@
 package ua.edu.sumdu.ta.yaroslavkuts.pr4;
 
+/**
+ * Emplement the linked list of the task in task manager.
+ *
+ * @version 1.0 31 Oct 2016
+ * @author Yaroslav Kuts
+ */
 public class LinkedTaskList extends AbstractTaskList {
 	
 	private Entry header;
@@ -9,6 +15,10 @@ public class LinkedTaskList extends AbstractTaskList {
 		header = new Entry();
 	}
 	
+	/**
+	 * Add new task in tasks list if task's link not null. 
+	 * @param task
+	 */
 	@Override
 	public void add(Task task) {
 		if (task != null) {
@@ -19,6 +29,10 @@ public class LinkedTaskList extends AbstractTaskList {
 		} else System.out.println("Can not add 'null'");
 	}
 	
+	/**
+	 * Add new task on the particular position in tasks list if task's link not null. 
+	 * @param index, task
+	 */
 	public void add(int index, Task task) {
 		if (index == size) {
 			add(task);
@@ -33,6 +47,11 @@ public class LinkedTaskList extends AbstractTaskList {
 		}
 	}
 	
+	/**
+	 * Find entry in task list by specified position. 
+	 * @param index
+	 * @return entry on particular position
+	 */
 	private Entry findEntry(int index) {
 		Entry e = null;
 		if (index < 0 || index >= size) {
@@ -52,6 +71,10 @@ public class LinkedTaskList extends AbstractTaskList {
 		return e;
 	}
 	
+	/**
+	 * Remove task from tasks list if task exists in list and not null. 
+	 * @param task
+	 */
 	@Override
 	public void remove(Task task) {
 		if (task != null) {
@@ -125,14 +148,12 @@ public class LinkedTaskList extends AbstractTaskList {
 		return result;
 	}
 	
-	/*public void printList() {
-		Entry e = header;
-		for (int i = 0; i < size; i++) {
-			e = e.next;
-			System.out.println(e.element.getTitle());
-		}
-	}*/
-	
+	/**
+	 * Describe nodes of the linked list.
+	 *
+	 * @version 1.0 31 Oct 2016
+	 * @author Yaroslav Kuts
+	 */
 	private class Entry {
 		
 		Task element;
