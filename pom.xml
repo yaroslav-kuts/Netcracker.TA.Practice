@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ua.edu.sumdu.ta.yaroslavkuts.pr4</groupId>
-  <artifactId>TA.Practice4.YaroslavKuts</artifactId>
+  <artifactId>TA.Practice5.YaroslavKuts</artifactId>
   <version>1</version>
   <packaging>jar</packaging>
 
-  <name>TA.Practice4.YaroslavKuts</name>
+  <name>TA.Practice5.YaroslavKuts</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -37,6 +37,11 @@
 		<groupId>mysql</groupId>
 		<artifactId>mysql-connector-java</artifactId>
 		<version>5.1.39-bin</version>
+	</dependency>
+	<dependency>
+		<groupId>com.oracle</groupId>
+		<artifactId>ojdbc6</artifactId>
+		<version>11.2.0.4</version>
 	</dependency>
 	<dependency>
 		<groupId>log4j</groupId>
