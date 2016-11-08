@@ -1,0 +1,12 @@
+ua\edu\sumdu\ta\yaroslavkuts\pr5\db\MysqlDB.class
+ua\edu\sumdu\ta\yaroslavkuts\pr5\AbstractTaskList.class
+ua\edu\sumdu\ta\yaroslavkuts\pr5\db\DBConnector.class
+ua\edu\sumdu\ta\yaroslavkuts\pr5\LinkedTaskList$Entry.class
+ua\edu\sumdu\ta\yaroslavkuts\pr5\ArrayTaskList.class
+ua\edu\sumdu\ta\yaroslavkuts\pr5\db\ConnectionPool.class
+ua\edu\sumdu\ta\yaroslavkuts\pr5\App.class
+ua\edu\sumdu\ta\yaroslavkuts\pr5\db\DataBase.class
+ua\edu\sumdu\ta\yaroslavkuts\pr5\Task.class
+ua\edu\sumdu\ta\yaroslavkuts\pr5\db\OracleDB.class
+ua\edu\sumdu\ta\yaroslavkuts\pr5\db\ConnectionFactory.class
+ua\edu\sumdu\ta\yaroslavkuts\pr5\LinkedTaskList.class
