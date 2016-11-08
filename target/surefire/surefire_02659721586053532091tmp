@@ -1,6 +1,0 @@
-#surefire_0
-#Tue Nov 08 11:31:53 EET 2016
-test=TaskTest,ArrayTaskListTest,LinkedTaskListTest,TestDB
-basedir=C\:\\Users\\\u042F\u0440\u043E\u0441\u043B\u0430\u0432\\Dropbox\\Netcracker\\TA\\TA.Practice5.YaroslavKuts
-user.dir=C\:\\Users\\\u042F\u0440\u043E\u0441\u043B\u0430\u0432\\Dropbox\\Netcracker\\TA\\TA.Practice5.YaroslavKuts
-localRepository=C\:\\Users\\\u042F\u0440\u043E\u0441\u043B\u0430\u0432\\.m2\\repository

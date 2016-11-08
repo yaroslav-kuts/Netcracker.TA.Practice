@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: ua.edu.sumdu.ta.yaroslavkuts.pr5.tests.TaskTest
--------------------------------------------------------------------------------
-Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.069 sec
