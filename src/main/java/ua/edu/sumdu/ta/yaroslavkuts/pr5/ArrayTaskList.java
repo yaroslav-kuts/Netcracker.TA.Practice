@@ -11,7 +11,7 @@ import ua.edu.sumdu.ta.yaroslavkuts.pr5.db.*;
  */
 public class ArrayTaskList extends AbstractTaskList {
 	
-	private DataBase db = MysqlDB.getInstance();
+	private DBWriter db = MysqlDB.getInstance();
 	
 	private Integer list_id = 0;
 	

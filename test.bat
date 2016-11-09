@@ -1,1 +1,1 @@
-mvn -Dtest=TaskTest,ArrayTaskListTest,LinkedTaskListTest,TestDB test
+mvn -Dtest=TaskTest,ArrayTaskListTest,LinkedTaskListTest,TestDB,SettingsReaderTest test

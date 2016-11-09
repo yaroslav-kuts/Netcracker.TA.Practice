@@ -18,7 +18,7 @@ public class TestDB {
 	
 	@Test
 	public void testOracleConnection() {
-		ConnectionFactory cf = new ConnectionFactory("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@localhost:1521:xe", "system", "2888");
+		ConnectionFactory cf = new ConnectionFactory(DataBases.ORACLE);
 		Connection connection = cf.create();
 		
 		assertTrue(connection != null);

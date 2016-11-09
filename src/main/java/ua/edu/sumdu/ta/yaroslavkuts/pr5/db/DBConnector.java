@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class DBConnector {
 	
 	private final static Logger log = Logger.getLogger(DBConnector.class);
-	private static ConnectionPool connections = new ConnectionPool("mysql");
+	private static ConnectionPool connections = new ConnectionPool(DataBases.MYSQL);
 		
 	/*public static Integer insertTask(Task task) {
 		StringBuilder query = new StringBuilder("insert into tasks (title, time, start, end, rep, isActive, prev, list_id)" 

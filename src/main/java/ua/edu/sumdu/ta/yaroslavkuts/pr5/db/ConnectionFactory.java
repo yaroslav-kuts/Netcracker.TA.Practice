@@ -8,25 +8,19 @@ import java.sql.SQLException;
 public class ConnectionFactory {
 	
 	private final static Logger LOG = Logger.getLogger(ConnectionFactory.class);
-	private String driver;
-	private String dsn;
-	private String usr;
-	private String pwd;
+	private DBInfo info;
 
-	public ConnectionFactory(String driver, String dsn, String usr, String pwd) {
-		this.driver = driver;
-		this.dsn = dsn;
-		this.usr = usr;
-		this.pwd = pwd;
+	public ConnectionFactory(DataBases db) {
+		this.info = db.getDBInfo();
 	}
 
 	public Connection create() {
 		Connection connection = null;
 		try {
 			LOG.info("Try to create new connection");
-			Class.forName(driver);  
+			Class.forName(info.getDriver());  
 			LOG.info("Driver was found");
-			connection = DriverManager.getConnection(dsn, usr, pwd);
+			connection = DriverManager.getConnection(info.getUrl(), info.getUser(), info.getPassword());
 			LOG.info("Connection created");
 		} catch (ClassNotFoundException e) {
 			LOG.error(e.getMessage());
