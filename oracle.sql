@@ -78,4 +78,6 @@ insert into attributes values(7, 2, 'size');
 
 insert into attributes values(8, 3, 'size');
 
+commit()
+
 
