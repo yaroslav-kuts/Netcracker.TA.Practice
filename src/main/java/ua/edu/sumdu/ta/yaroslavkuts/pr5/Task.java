@@ -9,7 +9,7 @@ import ua.edu.sumdu.ta.yaroslavkuts.pr5.db.*;
  */
 public class Task {
 	
-	private DataBase db = MysqlDB.getInstance();
+	private DBWriter db = MysqlDB.getInstance();
 	
 	private Integer task_id;
 	private String title;

@@ -12,13 +12,16 @@ class ConnectionPool {
 	private List<Connection> pool;
 	private ConnectionFactory cf;
 	
-	public ConnectionPool(String db) {
+	public ConnectionPool(DataBases db) {
 		pool = new ArrayList<Connection>();
 		
-		if (db.equals("oracle")) {
-			cf = new ConnectionFactory("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@localhost:1521:xe", "system", "2888");
+		if (db.equals(DataBases.ORACLE)) {
+			cf = new ConnectionFactory(DataBases.ORACLE);
+		} else if (db.equals(DataBases.MYSQL)) {
+			cf = new ConnectionFactory(DataBases.MYSQL);
 		} else {
-			cf = new ConnectionFactory("com.mysql.jdbc.Driver", "jdbc:mysql://localhost:3306/TaskManager","root", "root");
+			LOG.error("Such db not exist");
+			throw new IllegalArgumentException();
 		}
 		
 		for (int i = 0; i < SIZE; i++) {

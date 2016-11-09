@@ -18,7 +18,7 @@ public class TestDB {
 	
 	@Test
 	public void testOracleConnection() {
-		ConnectionFactory cf = new ConnectionFactory("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@localhost:1521:xe", "system", "2888");
+		ConnectionFactory cf = new ConnectionFactory(DataBases.ORACLE);
 		Connection connection = cf.create();
 		
 		assertTrue(connection != null);
@@ -28,7 +28,7 @@ public class TestDB {
 		db.insertParam(2, 1, 1, null, 0, null);
 	}
 	
-	@Test
+	/*@Test
 	public void testInsertTask() {
 		Task task = new Task("read book", 7);
 		
@@ -65,5 +65,5 @@ public class TestDB {
 		ArrayTaskList list = new ArrayTaskList();
 		
 		assertTrue(list.getList_id() != 0);
-	}
+	}*/
 }

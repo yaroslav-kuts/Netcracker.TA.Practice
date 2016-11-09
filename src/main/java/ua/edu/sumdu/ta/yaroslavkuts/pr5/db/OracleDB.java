@@ -5,15 +5,18 @@ import java.sql.PreparedStatement;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class OracleDB extends DataBase{
+public class OracleDB extends DBWriter{
 
-	private static OracleDB instance = new OracleDB();
+	private static OracleDB instance;
 	
 	private OracleDB() {
-		connections = new ConnectionPool("oracle");
+		connections = new ConnectionPool(DataBases.ORACLE);
 	}
 	
-	public static OracleDB getInstance() {
+	public static synchronized OracleDB getInstance() {
+		if (instance == null) {
+			instance = new OracleDB();
+		}
 		return instance;
 	}
 	

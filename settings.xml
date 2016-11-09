@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<settings>
+	<databases>
+		<config dbms="oracle">
+			<driver>oracle.jdbc.driver.OracleDriver</driver>
+			<url>jdbc:oracle:thin:@localhost:1521:xe</url>
+			<user>system</user>
+			<password>2888</password>
+		</config>
+		<config dbms="mysql">
+			<driver>com.mysql.jdbc.Driver</driver>
+			<url>jdbc:mysql://localhost:3306/TaskManager</url>
+			<user>root</user>
+			<password>root</password>
+		</config>
+	</databases>
+</settings>

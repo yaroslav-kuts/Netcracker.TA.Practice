@@ -7,15 +7,18 @@ import java.sql.ResultSet;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class MysqlDB extends DataBase {
+public class MysqlDB extends DBWriter {
 
-	private static MysqlDB instance = new MysqlDB();
+	private static MysqlDB instance;
 	
 	private MysqlDB() {
-		connections = new ConnectionPool("mysql");
+		connections = new ConnectionPool(DataBases.MYSQL);
 	}
 	
-	public static MysqlDB getInstance() {
+	public static synchronized MysqlDB getInstance() {
+		if (instance == null) {
+			instance = new MysqlDB();
+		}
 		return instance;
 	}
 	
