@@ -68,6 +68,7 @@ public class ArrayTaskList extends AbstractTaskList {
 	/**
 	 * Add new task in tasks list if task's link not null. 
 	 * @param task
+	 * @throws NullPointerException if task is null
 	 */
 	@Override
 	public void add(Task task) throws NullPointerException {
@@ -101,6 +102,7 @@ public class ArrayTaskList extends AbstractTaskList {
 	/**
 	 * Remove task from tasks list if task exists in list and not null. 
 	 * @param task
+	 * @throws NullPointerException if task is null
 	 */
 	@Override
 	public void remove(Task task) throws NullPointerException {
@@ -122,6 +124,12 @@ public class ArrayTaskList extends AbstractTaskList {
 		}
 	}
 	
+	/**
+	 * Find and return task by index in array list. 
+	 * @param index
+	 * @return task by passed index
+	 * @throws IndexOutOfBoundsException if index < 0 or >= then list's size
+	 */
 	@Override
 	public Task getTask(int index) throws IndexOutOfBoundsException {
 		Task result = null;

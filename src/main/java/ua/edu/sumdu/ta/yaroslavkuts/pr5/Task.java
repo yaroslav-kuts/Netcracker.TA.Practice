@@ -56,6 +56,7 @@ public class Task {
 	 * Calculate next time of task's execution. 
 	 * @param time
 	 * @return time in seconds of next task's execution after current time
+	 * @throws IllegalArgumentException if time has negative value
 	 */
 	public int nextTimeAfter(int time) throws IllegalArgumentException {
 		if (time < 0) {
@@ -154,6 +155,7 @@ public class Task {
 	/**
 	 * Validate and set task's title.
 	 * @param title
+	 * @throws IllegalArgumentException if title is null or empty
 	 */
 	public final void setTitle(String title) throws IllegalArgumentException {
 		if (title != null && title != "") {
@@ -180,6 +182,7 @@ public class Task {
 	/**
 	 * Validate and set time of task.
 	 * @param time
+	 * @throws IllegalArgumentException if time has negative value
 	 */
 	public final void setTime(int time) throws IllegalArgumentException {
 		if (isRepeated()) {
@@ -201,6 +204,7 @@ public class Task {
 	 * @param start
 	 * @param end
 	 * @param repeat
+	 * @throws IllegalArgumentException if some of repeat, end or start values is not validate
 	 */
 	public final void setTime(int start, int end, int repeat) throws IllegalArgumentException {
 		if (!isRepeated()) {
