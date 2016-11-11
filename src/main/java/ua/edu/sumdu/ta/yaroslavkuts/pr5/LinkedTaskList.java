@@ -27,7 +27,7 @@ public class LinkedTaskList extends AbstractTaskList {
 			entry.next.prev = entry;
 			size++;
 		} else {
-			throw new NullPointerException();
+			throw new NullPointerException("Task cannot be null");
 		}
 	}
 	
@@ -46,7 +46,7 @@ public class LinkedTaskList extends AbstractTaskList {
 				entry.next.prev = entry;
 				size++;
 			} else {
-				throw new NullPointerException();
+				throw new NullPointerException("Task cannot be null");
 			}
 		}
 	}
@@ -72,7 +72,7 @@ public class LinkedTaskList extends AbstractTaskList {
 				}
 			}
 		} else {
-			throw new NullPointerException();
+			throw new NullPointerException("Task cannot be null");
 		}
 	}
 	
@@ -82,7 +82,7 @@ public class LinkedTaskList extends AbstractTaskList {
 		if (index >= 0 && index < size()) {
 			result = findEntry(index).element;
 		} else {
-			throw new IndexOutOfBoundsException();
+			throw new IndexOutOfBoundsException("Index value out of interval from 0 to " + size());
 		}
 		return result;
 	}

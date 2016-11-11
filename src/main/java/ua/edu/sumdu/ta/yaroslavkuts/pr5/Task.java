@@ -59,7 +59,7 @@ public class Task {
 	 */
 	public int nextTimeAfter(int time) throws IllegalArgumentException {
 		if (time < 0) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Time must not be negative");
 		}
 		
 		if (isActive()) {
@@ -160,7 +160,7 @@ public class Task {
 			this.title = title;
 			//task_id = db.modifyTask(this);
 		} else {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Title cannot be empty or null");
 		}
 	}
 	
@@ -192,7 +192,7 @@ public class Task {
 			end = time;
 			//task_id = db.modifyTask(this);
 		} else {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Time must not be negative");
 		}
 	}
 	
@@ -216,16 +216,13 @@ public class Task {
 					this.repeat = repeat;
 					//task_id = db.modifyTask(this);
 				} else {
-					//System.out.println("The value of 'repeat' does not validate");
-					throw new IllegalArgumentException();
+					throw new IllegalArgumentException("Value of 'repeat' is not validate");
 				}
 			} else {
-				//System.out.println("The value of 'end' does not validate");
-				throw new IllegalArgumentException();
+				throw new IllegalArgumentException("Value of 'end' is not validate");
 			}
 		} else {
-			//System.out.println("The value of 'start' does not validate");
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Value of 'start' is not validate");
 		}
 	}
 	

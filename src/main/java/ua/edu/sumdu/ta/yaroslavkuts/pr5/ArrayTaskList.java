@@ -83,7 +83,7 @@ public class ArrayTaskList extends AbstractTaskList {
 				size++;
 			}
 		} else {
-			throw new NullPointerException();
+			throw new NullPointerException("Task cannot be null");
 		}
 	}
 	
@@ -118,7 +118,7 @@ public class ArrayTaskList extends AbstractTaskList {
 				}
 			}
 		} else {
-			throw  new NullPointerException();
+			throw  new NullPointerException("Task cannot be null");
 		}
 	}
 	
@@ -128,7 +128,7 @@ public class ArrayTaskList extends AbstractTaskList {
 		if (index >= 0 && index < size()) {
 			result = taskList[index];
 		} else {
-			throw new IndexOutOfBoundsException();
+			throw new IndexOutOfBoundsException("Index value out of interval from 0 to " + size());
 		}
 		return result;
 	}
