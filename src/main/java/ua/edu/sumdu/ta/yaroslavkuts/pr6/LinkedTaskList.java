@@ -130,7 +130,7 @@ public class LinkedTaskList extends AbstractTaskList implements Cloneable, Itera
                 if (removable) {
 					LinkedTaskList.this.remove(get(index-1).element);
 					removable = false;
-				} else throw new IllegalStateException();
+				} else throw new IllegalStateException("remove() using only once after each calling next()");
             }
         };
         return iterator;

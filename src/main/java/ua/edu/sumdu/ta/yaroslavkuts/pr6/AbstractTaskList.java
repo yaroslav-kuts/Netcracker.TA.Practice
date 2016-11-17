@@ -70,7 +70,7 @@ public abstract class AbstractTaskList implements Cloneable, Iterable<Task> {
 				if (removable) {
 					AbstractTaskList.this.remove(taskList[index-1]);
 					removable = false;
-				} else throw new IllegalStateException();
+				} else throw new IllegalStateException("remove() using only once after each calling next()");
             }
         };
         return iterator;
