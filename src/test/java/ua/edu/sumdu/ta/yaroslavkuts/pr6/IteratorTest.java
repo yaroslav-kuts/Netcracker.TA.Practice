@@ -198,4 +198,53 @@ public class IteratorTest {
 		assertEquals("Read book", tasks[0].getTitle());
 		assertEquals("English", tasks[1].getTitle());
 	}
+	
+	@Test
+	public void parallelIterationInLinkedList() {
+		
+		LinkedTaskList list = new LinkedTaskList();
+		list.add(new Task("Read book", 9));
+		list.add(new Task("Train", 27));
+		
+		String[] controlArr = {"Read book:Read book", "Read book:Train", "Train:Read book", "Train:Train"};
+		String[] testArr = new String[list.size() * list.size()];
+			
+		int j = 0;
+		for (Task t1 : list) {
+			for (Task t2 : list) {
+				testArr[j] = t1.getTitle() + ":" + t2.getTitle();
+				j++;
+			}
+		}
+		
+		for (int i = 0; i < controlArr.length; i++) {
+			assertEquals(controlArr[i], testArr[i]);
+		}
+		
+	}
+	
+	@Test
+	public void parallelIterationInArrayList() {
+		
+		ArrayTaskList list = new ArrayTaskList();
+		list.add(new Task("Read book", 9));
+		list.add(new Task("Train", 27));
+		
+		String[] controlArr = {"[EDUCTR][TA] Read book:[EDUCTR][TA] Read book", "[EDUCTR][TA] Read book:[EDUCTR][TA] Train",
+		"[EDUCTR][TA] Train:[EDUCTR][TA] Read book", "[EDUCTR][TA] Train:[EDUCTR][TA] Train"};
+		String[] testArr = new String[list.size() * list.size()];
+			
+		int j = 0;
+		for (Task t1 : list) {
+			for (Task t2 : list) {
+				testArr[j] = t1.getTitle() + ":" + t2.getTitle();
+				j++;
+			}
+		}
+		
+		for (int i = 0; i < controlArr.length; i++) {
+			assertEquals(controlArr[i], testArr[i]);
+		}
+		
+	}
 }

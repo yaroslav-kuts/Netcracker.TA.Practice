@@ -4,9 +4,10 @@ import org.junit.Before;
 import ua.edu.sumdu.ta.yaroslavkuts.pr6.*;
 
 public class LinkedTaskListTest extends TaskListTest {
-    @Before 
-    public void createTaskList() {
+
+    @Before
+    public void before()
+    {
         tasks = new LinkedTaskList();
     }
 }
-
