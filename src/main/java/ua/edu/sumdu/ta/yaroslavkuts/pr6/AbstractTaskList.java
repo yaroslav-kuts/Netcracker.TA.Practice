@@ -39,42 +39,8 @@ public abstract class AbstractTaskList implements Cloneable, Iterable<Task> {
 		return list;
 	}
 	
-	/**
-	 * Create iterator for elements with type 'Task'. 
-	 * @return task's iterator
-	 */
 	@Override
-	public Iterator<Task> iterator() {
-		Iterator<Task> iterator = new Iterator<Task>() {
-
-            private int index;
-			private boolean removable;
-
-            @Override
-            public boolean hasNext() {
-				if (index < size) return true;
-				else {
-					removable = false;
-					return false;
-				}
-            }
-
-            @Override
-            public Task next() {
-				removable = true;
-                return taskList[index++];
-            }
-
-            @Override
-            public void remove() throws IllegalStateException {
-				if (removable) {
-					AbstractTaskList.this.remove(taskList[index-1]);
-					removable = false;
-				} else throw new IllegalStateException("remove() using only once after each calling next()");
-            }
-        };
-        return iterator;
-	}
+	public abstract Iterator<Task> iterator();
 	
 	public abstract void add(Task task);
 	
