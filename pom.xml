@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ua.edu.sumdu.ta.yaroslavkuts.pr4</groupId>
-  <artifactId>TA.Practice5.YaroslavKuts</artifactId>
-  <version>1</version>
+  <groupId>ua.edu.sumdu.ta.yaroslavkuts.pr7</groupId>
+  <artifactId>TA.Practice7.YaroslavKuts</artifactId>
+  <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>TA.Practice5.YaroslavKuts</name>
+  <name>TA.Practice7.YaroslavKuts</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -47,6 +47,21 @@
 		<groupId>log4j</groupId>
 		<artifactId>log4j</artifactId>
 		<version>1.2.17</version>
+	</dependency>
+	<dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-server</artifactId>
+        <version>3.0.1</version>
+    </dependency>
+	<dependency>
+		<groupId>org.seleniumhq.selenium</groupId>
+		<artifactId>selenium-firefox-driver</artifactId>
+		<version>3.0.1</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-io</artifactId>
+		<version>1.3.2</version>
 	</dependency>
   </dependencies>
 </project>
