@@ -1,92 +1,60 @@
 package ua.edu.sumdu.ta.yaroslavkuts.pr7.tests;
 
-import ua.edu.sumdu.ta.yaroslavkuts.pr7.*;
+import ua.edu.sumdu.ta.yaroslavkuts.pr7.tests.pages.NetCrackerVacanciesPage;
+import ua.edu.sumdu.ta.yaroslavkuts.pr7.tests.pages.GoogleSearchPage;
+import ua.edu.sumdu.ta.yaroslavkuts.pr7.tests.pages.Offices;
+import ua.edu.sumdu.ta.yaroslavkuts.pr7.tests.tools.PageScreenShoter;
 import java.util.*;
-import java.io.*;
 import org.junit.*;
 import static org.junit.Assert.*;
-import org.apache.log4j.Logger;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.OutputType;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.junit.runners.MethodSorters;
+import ua.edu.sumdu.ta.yaroslavkuts.pr7.tests.tools.PropertiesReader;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class WebSiteTest {
-	
-	private final static Logger LOG = Logger.getLogger(WebSiteTest.class);
-	
+
+	private static HashMap<String, String> vacancies;
+
 	@BeforeClass
 	public static void setGeckoDriverProperty() {
 		System.setProperty("webdriver.gecko.driver", "C:/Program Files/geckodriver/geckodriver.exe");
 	}
 	
 	@Test
-	public void testNetcrackerVacancies() {
-		
+	public void findAndExtractVacancies() {
 		WebDriver driver = new FirefoxDriver();
-
 		driver.get("http://www.google.com");
+		GoogleSearchPage googlePage = new GoogleSearchPage(driver);
+		googlePage.typeSearchingString("NetCracker Su");
 		
-		WebElement element = driver.findElement(By.name("q"));
-		
-		element.sendKeys("NetCracker Su");
-		
-		WebElement promt = driver.findElement(By.className("sbdd_a"));
-		
-		List<WebElement> promtItems = promt.findElements(By.className("sbsb_c"));
-		
-		String target = "NetCracker Sumy";
-		boolean flag = false;
-		
-		for (WebElement e : promtItems) {
-			if (e.getText().equals(target)) {
-				e.click();
-				flag = true;
-			}
+		WebElement item = googlePage.getPromtItem("NetCracker Sumy");
+		if (item != null) {
+			item.click();
+		} else {
+			googlePage.typeSearchingString("my");
 		}
 		
-		if (!flag) {
-			element.sendKeys("my");
-			element.submit();
-		}
-		
-		try {
-			WebDriverWait waitForLink = new WebDriverWait(driver, 10);
-			//WebElement link = waitForLink.until(ExpectedConditions.elementToBeClickable(By.linkText("Netcracker - Open Positions")));
-			WebElement link = waitForLink.until(ExpectedConditions.elementToBeClickable(By.linkText("NetCracker. :: Суми")));
+		WebElement link = googlePage.getResultLink("NetCracker. :: Суми");
+		if (link != null) {
 			link.click();
-		} catch (TimeoutException e) {
-			driver.get("http://www.netcracker.com/ukr/vacancies");
+		} else {
+			driver.get("https://www.netcracker.com/careers/open-positions/?region=Russia+%2F+Ukraine+%2F+Belarus");
 		}
 		
-		WebDriverWait waitForLocationCheckBox = new WebDriverWait(driver, 60);
-		WebElement location = waitForLocationCheckBox.until(ExpectedConditions.presenceOfElementLocated(By.id("location_1752")));
-		location.click();
+		NetCrackerVacanciesPage netCrackerVacanciesPage = new NetCrackerVacanciesPage(driver);
+
+		netCrackerVacanciesPage.selectOfficeCheckBox(Offices.SUMY);
+		PageScreenShoter.takeScreenshot(driver);
+		vacancies = netCrackerVacanciesPage.getVacancies();
 		
-		File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		try {
-			FileUtils.copyFile(screenshot, new File(driver.getTitle() + ".png"));
-		} catch (IOException e) {
-			LOG.error(e.getMessage());
-		}
-		
-		List<WebElement> jobItems = driver.findElements(By.className("result"));
-		
-		HashMap<String, String> vacancies = new HashMap<String, String>();
-		
-		for (WebElement job : jobItems) {
-			vacancies.put(job.getAttribute("data-searchable"), job.getAttribute("data-category"));
-		}
-		
-		driver.quit();
-		
+		netCrackerVacanciesPage.exit();
+	}
+	
+	@Test
+	public void testCorrectnessOfVacancies() {
 		assertEquals(18, vacancies.size());
 		assertTrue(vacancies.containsKey("junior ta engineer\n\tsumy, ukraine\n\t"));
 		assertTrue(vacancies.containsKey("senior technical solution support engineer\n\tsumy, ukraine\n\t"));
