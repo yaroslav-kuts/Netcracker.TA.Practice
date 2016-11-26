@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public class NetCrackerVacanciesPage extends Page {
 
-    private By jobItemsLocator = By.className("result");
+    private static By jobItemsLocator = By.className("result");
 
     public NetCrackerVacanciesPage(WebDriver driver) {
         super(driver);
