@@ -1,8 +1,7 @@
 package ua.edu.sumdu.ta.yaroslavkuts.pr7;
 
-import ua.edu.sumdu.ta.yaroslavkuts.pr7.AbstractTaskList;
-import ua.edu.sumdu.ta.yaroslavkuts.pr7.db.*;
 import org.apache.log4j.Logger;
+
 import java.util.Iterator;
 
 /**
@@ -14,7 +13,7 @@ import java.util.Iterator;
 public class ArrayTaskList extends AbstractTaskList implements Cloneable {
 	
 	private final static Logger LOG = Logger.getLogger(ArrayTaskList.class);
-	private DBWriter db = MysqlDB.getInstance();
+	//private DBWriter db = MysqlDB.getInstance();
 	private Integer list_id = 0;
 	
 	public ArrayTaskList() {

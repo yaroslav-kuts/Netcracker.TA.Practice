@@ -13455,3 +13455,146 @@
 2016-11-28 10:39:37 DEBUG MainClientExec:103 - Connection discarded
 2016-11-28 10:39:37 DEBUG PoolingHttpClientConnectionManager:320 - Connection released: [id: 87][route: {}->http://localhost:15696][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
 2016-11-28 10:39:37 DEBUG PoolingHttpClientConnectionManager:401 - Closing connections idle longer than 0 SECONDS
+2016-11-28 12:04:45 INFO  SettingsReader:28 - Node 'config' exists and it's length = 2
+2016-11-28 12:04:45 INFO  SettingsReader:38 - dbms: oracle
+2016-11-28 12:04:45 INFO  SettingsReader:38 - dbms: mysql
+2016-11-28 12:04:45 INFO  SettingsReader:28 - Node 'config' exists and it's length = 2
+2016-11-28 12:04:45 INFO  SettingsReader:38 - dbms: oracle
+2016-11-28 12:04:45 INFO  SettingsReader:38 - dbms: mysql
+2016-11-28 12:04:45 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:04:47 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:04:51 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:04:51 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:04:51 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:04:51 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:04:51 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:04:51 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:04:51 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:04:51 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:04:51 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:04:51 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:04:51 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:04:51 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:04:51 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:04:51 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:04:51 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:04:51 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:04:51 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:04:51 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:04:52 INFO  TaskXMLSerializer:51 - java.io.FileNotFoundException: C:\Users\%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2\Dropbox\Netcracker\TA\TA.Practice7.YaroslavKuts\result.xml (Системе не удается найти указанный путь)
+2016-11-28 12:11:56 INFO  SettingsReader:28 - Node 'config' exists and it's length = 2
+2016-11-28 12:11:56 INFO  SettingsReader:38 - dbms: oracle
+2016-11-28 12:11:56 INFO  SettingsReader:38 - dbms: mysql
+2016-11-28 12:11:56 INFO  SettingsReader:28 - Node 'config' exists and it's length = 2
+2016-11-28 12:11:56 INFO  SettingsReader:38 - dbms: oracle
+2016-11-28 12:11:56 INFO  SettingsReader:38 - dbms: mysql
+2016-11-28 12:11:56 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:11:56 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:11:58 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:11:58 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:11:58 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:11:58 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:11:58 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:11:58 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:11:58 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:11:58 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:11:58 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:11:58 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:11:58 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:11:58 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:11:58 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:11:58 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:11:58 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:11:58 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:11:58 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:11:58 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:11:58 INFO  TaskXMLSerializer:51 - java.io.FileNotFoundException: C:\Users\%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2\Dropbox\Netcracker\TA\TA.Practice7.YaroslavKuts\result.xml (Системе не удается найти указанный путь)
+2016-11-28 12:16:12 INFO  SettingsReader:28 - Node 'config' exists and it's length = 2
+2016-11-28 12:16:12 INFO  SettingsReader:38 - dbms: oracle
+2016-11-28 12:16:12 INFO  SettingsReader:38 - dbms: mysql
+2016-11-28 12:16:12 INFO  SettingsReader:28 - Node 'config' exists and it's length = 2
+2016-11-28 12:16:12 INFO  SettingsReader:38 - dbms: oracle
+2016-11-28 12:16:12 INFO  SettingsReader:38 - dbms: mysql
+2016-11-28 12:16:12 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:16:13 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:16:15 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:16:15 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:16:15 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:16:15 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:16:15 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:16:15 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:16:15 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:16:15 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:16:15 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:16:15 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:16:15 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:16:15 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:16:15 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:16:15 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:16:15 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:16:15 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:16:15 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:16:15 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:16:16 INFO  TaskXMLSerializer:52 - java.io.FileNotFoundException: C:\Users\%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2\Dropbox\Netcracker\TA\TA.Practice7.YaroslavKuts\result.xml (Системе не удается найти указанный путь)
+2016-11-28 12:22:05 INFO  SettingsReader:28 - Node 'config' exists and it's length = 2
+2016-11-28 12:22:05 INFO  SettingsReader:38 - dbms: oracle
+2016-11-28 12:22:05 INFO  SettingsReader:38 - dbms: mysql
+2016-11-28 12:22:05 INFO  SettingsReader:28 - Node 'config' exists and it's length = 2
+2016-11-28 12:22:05 INFO  SettingsReader:38 - dbms: oracle
+2016-11-28 12:22:05 INFO  SettingsReader:38 - dbms: mysql
+2016-11-28 12:22:05 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:22:05 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:22:12 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:22:12 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:22:12 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:22:12 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:22:12 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:22:12 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:22:12 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:22:12 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:22:12 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:22:12 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:22:12 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:22:12 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:22:12 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:22:12 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:22:12 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:22:12 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:22:12 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:22:12 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:22:14 INFO  TaskXMLSerializer:52 - java.io.FileNotFoundException: C:\Users\%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2\Dropbox\Netcracker\TA\TA.Practice7.YaroslavKuts\result.xml (Системе не удается найти указанный путь)
+2016-11-28 12:25:06 INFO  SettingsReader:28 - Node 'config' exists and it's length = 2
+2016-11-28 12:25:06 INFO  SettingsReader:38 - dbms: oracle
+2016-11-28 12:25:06 INFO  SettingsReader:38 - dbms: mysql
+2016-11-28 12:25:06 INFO  SettingsReader:28 - Node 'config' exists and it's length = 2
+2016-11-28 12:25:06 INFO  SettingsReader:38 - dbms: oracle
+2016-11-28 12:25:06 INFO  SettingsReader:38 - dbms: mysql
+2016-11-28 12:25:06 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:25:07 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:25:08 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:25:08 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:25:08 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:25:08 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:25:08 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:25:08 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:25:08 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:25:08 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:25:08 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:25:08 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:25:08 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:25:08 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:25:08 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:25:08 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:25:08 INFO  ConnectionFactory:20 - Try to create new connection
+2016-11-28 12:25:08 INFO  ConnectionFactory:22 - Driver was found
+2016-11-28 12:25:08 INFO  ConnectionFactory:24 - Connection created
+2016-11-28 12:25:08 INFO  ConnectionPool:29 - Connection added in pool
+2016-11-28 12:25:08 INFO  TaskXMLSerializer:54 - java.io.FileNotFoundException: C:\Users\%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2\Dropbox\Netcracker\TA\TA.Practice7.YaroslavKuts\result.xml (Системе не удается найти указанный путь)
+2016-11-28 13:11:33 INFO  TaskXMLSerializer:54 - java.io.FileNotFoundException: C:\Users\%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2\Dropbox\Netcracker\TA\TA.Practice7.YaroslavKuts\result.xml (Системе не удается найти указанный путь)
+2016-11-28 13:17:19 INFO  TaskXMLSerializer:55 - java.io.FileNotFoundException: C:\Users\%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2\Dropbox\Netcracker\TA\TA.Practice7.YaroslavKuts\result.xml (Системе не удается найти указанный путь)
+2016-11-28 13:18:19 INFO  TaskXMLSerializer:56 - java.io.FileNotFoundException: C:\Users\%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2\Dropbox\Netcracker\TA\TA.Practice7.YaroslavKuts\result.xml (Системе не удается найти указанный путь)
+2016-11-28 13:23:21 INFO  TaskXMLSerializer:54 - java.io.FileNotFoundException: C:\Users\%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2\Dropbox\Netcracker\TA\TA.Practice7.YaroslavKuts\result.xml (Системе не удается найти указанный путь)
+2016-11-28 13:42:37 INFO  TaskXMLSerializer:55 - java.io.FileNotFoundException: C:\Users\%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2\Dropbox\Netcracker\TA\TA.Practice7.YaroslavKuts\result.xml (Системе не удается найти указанный путь)
+2016-11-28 13:43:40 INFO  TaskXMLSerializer:52 - java.io.FileNotFoundException: C:\Users\%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2\Dropbox\Netcracker\TA\TA.Practice7.YaroslavKuts\result.xml (Системе не удается найти указанный путь)
+2016-11-28 13:45:11 INFO  TaskXMLSerializer:54 - java.io.FileNotFoundException: C:\Users\%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2\Dropbox\Netcracker\TA\TA.Practice7.YaroslavKuts\result.xml (Системе не удается найти указанный путь)
+2016-11-28 13:46:11 INFO  TaskXMLSerializer:54 - java.io.FileNotFoundException: C:\Users\%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2\Dropbox\Netcracker\TA\TA.Practice7.YaroslavKuts\result.xml (Системе не удается найти указанный путь)

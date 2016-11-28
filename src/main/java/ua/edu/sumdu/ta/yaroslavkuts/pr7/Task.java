@@ -1,6 +1,5 @@
 package ua.edu.sumdu.ta.yaroslavkuts.pr7;
 
-import ua.edu.sumdu.ta.yaroslavkuts.pr7.db.*;
 /**
  * Describe the data type "task"("event") in task manager.
  *
@@ -9,7 +8,7 @@ import ua.edu.sumdu.ta.yaroslavkuts.pr7.db.*;
  */
 public class Task implements Cloneable {
 	
-	private DBWriter db = MysqlDB.getInstance();
+	//private DBWriter db = MysqlDB.getInstance();
 	
 	private Integer task_id;
 	private String title;
