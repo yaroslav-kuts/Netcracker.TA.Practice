@@ -3,6 +3,7 @@ package ua.edu.sumdu.ta.yaroslavkuts.pr7.tests;
 import org.junit.Assert;
 import org.junit.Test;
 import ua.edu.sumdu.ta.yaroslavkuts.pr7.ArrayTaskList;
+import ua.edu.sumdu.ta.yaroslavkuts.pr7.LinkedTaskList;
 import ua.edu.sumdu.ta.yaroslavkuts.pr7.Task;
 import ua.edu.sumdu.ta.yaroslavkuts.pr7.TaskXMLSerializer;
 
@@ -16,7 +17,7 @@ public class TaskXMLSerializerTest {
 
     @Test
     public void saveTest() throws IOException {
-        ArrayTaskList list = new ArrayTaskList();
+        LinkedTaskList list = new LinkedTaskList();
 		Task task1 = new Task("Wake up", 28800);
 		task1.setActive(true);
         list.add(task1);
@@ -25,7 +26,7 @@ public class TaskXMLSerializerTest {
         list.add(task2);
 
         TaskXMLSerializer.save(list, "result.xml");
-		ArrayTaskList result = (ArrayTaskList) TaskXMLSerializer.load("result.xml");
+		LinkedTaskList result = TaskXMLSerializer.load("result.xml", list);
         Assert.assertTrue(list.equals(result));
     }
 }

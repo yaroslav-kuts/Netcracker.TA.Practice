@@ -14,13 +14,26 @@ import org.jdom2.input.SAXBuilder;
 import org.jdom2.JDOMException;
 
 /**
- * Created by Ярослав on 28.11.2016.
+ * Util for saving and loading from xml file list of tasks.
+ *
+ * @version 1.0 28 Nov 2016
+ * @author Yaroslav Kuts
  */
 public class TaskXMLSerializer {
 
     private final static Logger LOG = Logger.getLogger(TaskXMLSerializer.class);
 
-	public static void save(AbstractTaskList object, String file) {
+	/**
+	 * Save task list in xml file. 
+	 * @param object list that will be saved
+	 * @param file absolute or relation url for xml file
+	 * @throws IllegalArgumentException if object or file is null, or file is empty
+	 */
+	public static void save(AbstractTaskList object, String file) throws IllegalArgumentException {
+		if (object == null || file == null || file.equals("")) {
+			throw new IllegalArgumentException("One or both params are null or file string empty");
+		}
+		
 		try {
 			Element tasksElement = new Element("tasks");
 			Document doc = new Document(tasksElement);
@@ -42,11 +55,45 @@ public class TaskXMLSerializer {
 			LOG.error(e.getMessage());
 		}
 	}
-
-    public static AbstractTaskList load(String file) {
+	
+	/**
+	 * Extract task list from xml file. 
+	 * @param file or relation url for xml file
+	 * @return list of extracted tasks
+	 * @throws IllegalArgumentException if file string is null or empty
+	 */
+	public static ArrayTaskList load(String file) throws IllegalArgumentException {
+		if (file == null || file.equals("")) {
+			throw new IllegalArgumentException("File string is null or empty");
+		}
 		
-		ArrayTaskList taskList = new ArrayTaskList();
+		ArrayTaskList list = writeInList(file, new ArrayTaskList());
+		return list;
+	}
+	
+	/**
+	 * Extract task list from xml file. 
+	 * @param file absolute or relation url for xml file
+	 * @param list
+	 * @return concrete format of list that contains extracted tasks
+	 * @throws IllegalArgumentException if file string is null or empty
+	 */
+	public static <T extends AbstractTaskList> T load(String file, T list) throws IllegalArgumentException {
+		if (list == null || file == null || file.equals("")) {
+			throw new IllegalArgumentException("One or both params are null or file string empty");
+		}
 		
+		list = writeInList(file, list);
+		return list;
+	}
+	
+	/**
+	 * Parse xml file to list of tasks. 
+	 * @param file absolute or relation url for xml file
+	 * @param taskList
+	 * @return concrete format of list that contains extracted tasks
+	 */
+	private static <T extends AbstractTaskList> T writeInList(String file, T taskList) {
 		try {
 			File inputFile = new File(file);
 			SAXBuilder saxBuilder = new SAXBuilder();
@@ -74,5 +121,5 @@ public class TaskXMLSerializer {
 			LOG.error(e.getMessage());
 		}
 		return taskList;
-    }
+	}
 }
