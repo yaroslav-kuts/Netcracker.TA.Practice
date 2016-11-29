@@ -13598,3 +13598,4 @@
 2016-11-28 13:43:40 INFO  TaskXMLSerializer:52 - java.io.FileNotFoundException: C:\Users\%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2\Dropbox\Netcracker\TA\TA.Practice7.YaroslavKuts\result.xml (Системе не удается найти указанный путь)
 2016-11-28 13:45:11 INFO  TaskXMLSerializer:54 - java.io.FileNotFoundException: C:\Users\%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2\Dropbox\Netcracker\TA\TA.Practice7.YaroslavKuts\result.xml (Системе не удается найти указанный путь)
 2016-11-28 13:46:11 INFO  TaskXMLSerializer:54 - java.io.FileNotFoundException: C:\Users\%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2\Dropbox\Netcracker\TA\TA.Practice7.YaroslavKuts\result.xml (Системе не удается найти указанный путь)
+2016-11-29 13:04:48 ERROR TaskXMLSerializer:130 - Xml file is not valid
