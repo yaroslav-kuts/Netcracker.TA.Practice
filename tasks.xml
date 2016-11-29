@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tasks xs="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="schema.xsd">
+  <task active="true" time="28800" start="28800" end="28800" repeat="0" repeated="false">Wake up</task>
+  <task active="true" time="30000" start="30000" end="64800" repeat="14400" repeated="true">Eat</task>
+</tasks>

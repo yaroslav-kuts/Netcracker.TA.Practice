@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="tasks">
+	  <xs:complexType>
+		 <xs:sequence>
+			<xs:element name="task" maxOccurs="unbounded">
+				<xs:complexType> 
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="active" type="xs:boolean" use="required"/>
+							<xs:attribute name="time" type="xs:integer" use="required"/>
+							<xs:attribute name="start" type="xs:integer" use="required"/>
+							<xs:attribute name="end" type="xs:integer" use="required"/>
+							<xs:attribute name="repeat" type="xs:integer" use="required"/>
+							<xs:attribute name="repeated" type="xs:boolean" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>	
+				</xs:complexType>
+			</xs:element>
+		 </xs:sequence>
+	  </xs:complexType>
+	</xs:element>
+</xs:schema>

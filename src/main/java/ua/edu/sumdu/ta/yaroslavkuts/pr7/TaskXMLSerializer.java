@@ -12,6 +12,7 @@ import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
 import org.jdom2.input.SAXBuilder;
 import org.jdom2.JDOMException;
+import org.jdom2.Namespace;
 
 /**
  * Util for saving and loading from xml file list of tasks.
@@ -36,8 +37,10 @@ public class TaskXMLSerializer {
 		
 		try {
 			Element tasksElement = new Element("tasks");
+			tasksElement.setAttribute(new Attribute("xs", "http://www.w3.org/2001/XMLSchema-instance"));
+			tasksElement.setAttribute(new Attribute("noNamespaceSchemaLocation", "schema.xsd"));
 			Document doc = new Document(tasksElement);
-			
+
 			for (Task task : object) {
 				Element taskElement = new Element("task").setText(task.getTitle());
 				taskElement.setAttribute(new Attribute("active", Boolean.toString(task.isActive())));
@@ -55,7 +58,7 @@ public class TaskXMLSerializer {
 			LOG.error(e.getMessage());
 		}
 	}
-	
+
 	/**
 	 * Extract task list from xml file. 
 	 * @param file or relation url for xml file

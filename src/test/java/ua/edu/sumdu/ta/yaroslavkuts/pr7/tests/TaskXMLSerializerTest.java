@@ -25,8 +25,8 @@ public class TaskXMLSerializerTest {
 		task2.setActive(true);
         list.add(task2);
 
-        TaskXMLSerializer.save(list, "result.xml");
-		LinkedTaskList result = TaskXMLSerializer.load("result.xml", list);
+        TaskXMLSerializer.save(list, "tasks.xml");
+		LinkedTaskList result = TaskXMLSerializer.load("tasks.xml", list);
         Assert.assertTrue(list.equals(result));
     }
 }
