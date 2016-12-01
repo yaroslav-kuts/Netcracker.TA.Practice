@@ -2,12 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ua.edu.sumdu.ta.yaroslavkuts.pr7</groupId>
-    <artifactId>TA.Practice7.YaroslavKuts</artifactId>
+    <groupId>ua.edu.sumdu.ta.yaroslavkuts.pr8</groupId>
+    <artifactId>TA.Practice8.YaroslavKuts</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>TA.Practice7.YaroslavKuts</name>
+    <name>TA.Practice8.YaroslavKuts</name>
     <url>http://maven.apache.org</url>
 
     <properties>
